@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/eilonALT/simpleServer/issues"
   },
-  "homepage": "https://github.com/eilonALT/simpleServer#readme"
+  "homepage": "https://github.com/eilonALT/simpleServer#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
