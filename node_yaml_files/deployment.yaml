@@ -1,21 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node
+  labels:
+    app: nginx
+  name: nginx-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node
+      app: nginx
   template:
     metadata:
       labels:
-        app: node
+        app: nginx
     spec:
       containers:
-      - name: node
-        image: node:latest
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        - image: nginx
+          name: nginx
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
