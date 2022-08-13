@@ -15,7 +15,7 @@ spec:
         app: node
     spec:
       containers:
-        - image: node
+        - image: node:latest
           name: node
           resources:
             limits:
