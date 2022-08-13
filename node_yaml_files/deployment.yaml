@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: node  
+    app: node
   name: node-deployment
 spec:
   replicas: 1
@@ -17,3 +17,10 @@ spec:
       containers:
         - image: node
           name: node
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 256Mi
+              cpu: "0.2"
